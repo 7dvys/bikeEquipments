@@ -1,4 +1,4 @@
-import { getImage } from 'astro:assets';
+// import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
@@ -57,8 +57,8 @@ export const adaptOpenGraphImages = async (
   }
 
   const images = openGraph.images;
-  const defaultWidth = 1200;
-  const defaultHeight = 626;
+  // const defaultWidth = 1200;
+  // const defaultHeight = 626;
 
   const adaptedImages = await Promise.all(
     images.map(async (image) => {
@@ -70,12 +70,14 @@ export const adaptOpenGraphImages = async (
           };
         }
 
-        const _image = await getImage({
-          src: resolvedImage,
-          alt: 'Placeholder alt',
-          width: image?.width || defaultWidth,
-          height: image?.height || defaultHeight,
-        });
+        // const _image = await getImage({
+        //   src: resolvedImage,
+        //   alt: 'Placeholder alt',
+        //   width: image?.width || defaultWidth,
+        //   height: image?.height || defaultHeight,
+        // });
+
+        const _image = undefined;
 
         if (typeof _image === 'object') {
           return {
