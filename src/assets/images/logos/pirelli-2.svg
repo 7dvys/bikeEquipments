@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2428.0432"
+   height="515.63916"
+   viewBox="0 0 187.20796 39.757017"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="pirelli-2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     id="g4"
+     transform="translate(-2.7756865,-58.752029)">
+    <path
+       d="m 29.290686,98.509042 h 11.499 v -20.787 h -11.499 z m 146.827004,0 h 11.5 v -20.787 h -11.5 z"
+       id="path2" />
+    <path
+       d="M 182.48669,58.753042 H 2.7756864 v 39.662 H 22.677686 v -24.916 l 159.808004,0.004 c 4.12061,0.06814 7.49767,-3.253326 7.49795,-7.374492 2.8e-4,-4.121165 -3.37634,-7.443087 -7.49695,-7.375508 z m -22.076,9.721 H 22.678686 v -4.704 l 137.732004,0.013 c 3.19258,-0.06592 3.19258,4.756924 0,4.691 z"
+       id="path3"
+       sodipodi:nodetypes="ccccccscccccc" />
+    <path
+       d="m 76.830686,91.048042 c 2.349,-1.064 3.835,-3.43 3.835,-6.176 0,-3.742 -2.943,-7.15 -7.956,-7.15 h -23.661 v 20.787 h 11.499 v -6.707 h 3.76 l 3.464,6.707 h 12.899 z m -9.722,-4.281 h -6.561 v -4.4 l 6.561,0.022 a 2.189,2.189 0 1 1 0,4.378 z m 20.774,11.742 h 25.358004 v -4.644 H 99.380686 v -3.059 h 13.860004 v -5.012 H 99.380686 v -3.059 h 13.860004 v -5.013 H 87.882686 Z m 44.696004,-20.787 h -11.5 v 20.787 h 23.146 v -4.644 h -11.646 z m 27.101,0 h -11.498 v 20.787 h 23.145 v -4.644 h -11.647 z"
+       id="path4" />
+  </g>
+</svg>

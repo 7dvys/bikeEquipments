@@ -1,0 +1,26 @@
+---
+import '~/assets/styles/logoCarrousel.css';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+import { CARROUSEL_LOGOS_DIR } from '~/utils/config';
+
+const lsLogosDir = await fs.readdir(CARROUSEL_LOGOS_DIR);
+const filesPromises = lsLogosDir.map(entrada=>{
+    const rutaCompleta = path.join(CARROUSEL_LOGOS_DIR,entrada);
+    const isFilePromise = fs.stat(rutaCompleta).then((stat)=>stat.isFile()?rutaCompleta:false);
+    return isFilePromise;
+})
+
+const files = await Promise.all(filesPromises)
+
+const logosSrcs = files.filter(entrada=>entrada !== false) as string[];
+---
+
+<div class="logos dark:bg-white" >
+    <div class="logos-slide ">
+        {logosSrcs.map(src=><img src={src} alt="brand-logo" />)}
+        {logosSrcs.map(src=><img src={src} alt="brand-logo" />)}
+
+    </div>  
+</div>
