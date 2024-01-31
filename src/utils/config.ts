@@ -206,4 +206,4 @@ export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const UI = getUI();
 export const ANALYTICS = getAnalytics();
-export const CARROUSEL_LOGOS_DIR = "src/assets/images/logos";
+export const CARROUSEL_LOGOS_DIR = "/images/logos";
