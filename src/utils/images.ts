@@ -1,4 +1,4 @@
-// import { getImage } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
@@ -50,15 +50,15 @@ export const findImage = async (
 /** */
 export const adaptOpenGraphImages = async (
   openGraph: OpenGraph = {},
-  // astroSite: URL | undefined = new URL('')
+  astroSite: URL | undefined = new URL('')
 ): Promise<OpenGraph> => {
   if (!openGraph?.images?.length) {
     return openGraph;
   }
 
   const images = openGraph.images;
-  // const defaultWidth = 1200;
-  // const defaultHeight = 626;
+  const defaultWidth = 1200;
+  const defaultHeight = 626;
 
   const adaptedImages = await Promise.all(
     images.map(async (image) => {
@@ -70,24 +70,29 @@ export const adaptOpenGraphImages = async (
           };
         }
 
-        // const _image = await getImage({
-        //   src: resolvedImage,
-        //   alt: 'Placeholder alt',
-        //   width: image?.width || defaultWidth,
-        //   height: image?.height || defaultHeight,
-        // });
+        const _image = await getImage({
+          src: resolvedImage,
+          alt: 'Placeholder alt',
+          width: image?.width || defaultWidth,
+          height: image?.height || defaultHeight,
+        });
 
+        if (typeof _image !== 'object')
+        return {url:''}
 
-        // if (typeof _image === 'object') {
-        //   return {
-        //     url: typeof _image.src === 'string' ? String(new URL(_image.src, astroSite)) : 'pepe',
-        //     width: typeof _image.width === 'number' ? _image.width : undefined,
-        //     height: typeof _image.height === 'number' ? _image.height : undefined,
-        //   };
-        // }
+        if('src' in _image && 'width' in _image && 'height' in _image)
         return {
-          url: '',
+          url: typeof _image.src === 'string' ? String(new URL(_image.src, astroSite)) : 'pepe',
+          width: typeof _image.width === 'number' ? _image.width : undefined,
+          height: typeof _image.height === 'number' ? _image.height : undefined,
         };
+
+        return {
+          url:'pepe',
+          width:undefined,
+          height:undefined,
+        }
+
       }
 
       return {
