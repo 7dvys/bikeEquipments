@@ -15,6 +15,8 @@ const filesPromises = lsLogosDir.map(entrada=>{
 const files = await Promise.all(filesPromises)
 
 const logosSrcs = files.filter(entrada=>entrada !== false) as string[];
+
+console.log(logosSrcs)
 ---
 
 <div class="logos dark:bg-white" >
