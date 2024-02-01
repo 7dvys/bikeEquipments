@@ -1,8 +1,11 @@
 ---
 import { SITE } from '~/utils/config';
+import { Image } from 'astro:assets';
+
+import icon from '~/assets/icon.svg'
 ---
 
 <span class="self-center flex items-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <img class="w-14 mr-2" src="./src/assets/icon.svg" alt="">
+    <Image class="w-14 mr-2" src={icon} alt="Bike Equipments logo"/>
   {SITE?.name}
 </span>

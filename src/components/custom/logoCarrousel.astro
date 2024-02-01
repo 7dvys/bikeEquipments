@@ -1,28 +1,33 @@
 ---
 import '~/assets/styles/logoCarrousel.css';
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import { Image } from 'astro:assets';
+import {type ImageMetadata } from 'astro';
 
-import { CARROUSEL_LOGOS_DIR } from '~/utils/config';
+// import fs from 'node:fs/promises';
+// import path from 'node:path';
 
-const lsLogosDir = await fs.readdir(CARROUSEL_LOGOS_DIR);
-const filesPromises = lsLogosDir.map(entrada=>{
-    const rutaCompleta = path.join(CARROUSEL_LOGOS_DIR,entrada);
-    const isFilePromise = fs.stat(rutaCompleta).then((stat)=>stat.isFile()?rutaCompleta:false);
-    return isFilePromise;
-})
+// import { CARROUSEL_LOGOS_DIR } from '~/utils/config';
 
-const files = await Promise.all(filesPromises)
+// const lsLogosDir = await fs.readdir(CARROUSEL_LOGOS_DIR);
+// const filesPromises = lsLogosDir.map(entrada=>{
+//     const rutaCompleta = path.join(CARROUSEL_LOGOS_DIR,entrada);
+//     const isFilePromise = fs.stat(rutaCompleta).then((stat)=>stat.isFile()?rutaCompleta:false);
+//     return isFilePromise;
+// })
 
-const logosSrcs = files.filter(entrada=>entrada !== false) as string[];
+// const files = await Promise.all(filesPromises)
 
-console.log(logosSrcs)
+// const logosSrcs = files.filter(entrada=>entrada !== false) as string[];
+
+// console.log(logosSrcs)
+
+const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/logos/*.{jpeg,jpg,png,gif,svg}');
+console.log(images)
 ---
 
 <div class="logos dark:bg-white" >
     <div class="logos-slide ">
-        {logosSrcs.map(src=><img src={src} alt="brand-logo" />)}
-        {logosSrcs.map(src=><img src={src} alt="brand-logo" />)}
-
+        {Object.values(images).map((image)=><Image height={70} src={image()} alt="brand-logo"/>)}
+        {Object.values(images).map((image)=><Image height={70} src={image()} alt="brand-logo"/>)}
     </div>  
 </div>
