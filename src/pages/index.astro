@@ -3,16 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-// import Features2 from '~/components/widgets/Features2.astro';
-// import Steps from '~/components/widgets/Steps.astro';
-import Text from '~/components/widgets/Text.astro';
-// import Content from '~/components/widgets/Content.astro';
-// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import LogosCarrousel from '~/components/custom/logoCarrousel.astro'
+// import HeroText from '~/components/widgets/HeroText.astro';
+// import LogosCarrousel from '~/components/custom/logoCarrousel.astro'
+import ScrappedImagesGallery from '~/components/custom/scrappedImagesGallery.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 
@@ -23,63 +18,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata} >
-  <!-- Hero Widget ******************* -->
-  <HeroText>
-    <Fragment slot="title">
-      Tu principal proveedor de repuestos, indumentaria y equipamiento para motos.
-    </Fragment>
-  </HeroText>
 
+  <ScrappedImagesGallery/>
 
-  <LogosCarrousel/>
-
-  <Text
-  title="Bike Equipments Argentina"
-  subtitle="¡Bienvenido a MotoParts Argentina! Somos tu fuente global de repuestos y accesorios para motocicletas, cuatriciclos, scooters, vehículos acuáticos y side-by-side. Ofrecemos repuestos originales y nuevos de fábrica a precios competitivos, enviados directamente a clientes de todo el mundo."
-/>
-  <!-- Note Widget ******************* -->
   <Note />
-  
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps
-    title="¿Cómo Funciona?"
-    items={[
-      {
-        title: 'Paso 1: <span class="font-medium">Explora y Encuentra</span>',
-        description:
-        'Busca fácilmente tus repuestos por año, marca y modelo, o simplemente con el número de parte.',
-        icon: 'tabler:message',
-      },
-      {
-        title: 'Paso 2: <span class="font-medium">Proceso de Pedido Sencillo</em>',
-        description:
-          "Realiza tu pedido en unos simples pasos. Ofrecemos opciones de pago y envío flexibles.",
-        icon: 'tabler:writing',
-      },
-      {
-        title: 'Paso 3: <span class="font-medium">Envío Rápido y Confiable</span>',
-        description:
-          'La mayoría de los pedidos se envían en 3-5 días hábiles.',
-        icon: 'tabler:cube-send',
-      },
-      {
-        title: 'Listo!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: '/images/hot-bike.jpg',
-      alt: 'Sport Bike',
-    }}
-  /> -->
-
-  <!-- Features Widget *************** -->
 
   <Features
     id="WhyUs"
-    title="¿Por qué Importar con Nosotros?"
-    subtitle="Tu Socio en Motopartes: Más de 15 años de experiencia, una red sólida de contactos, asesoramiento personalizado y productos de alta calidad. La opción confiable en importación de motopartes."
+    title="Bike Equipments Argentina"
+    subtitle="¡Bienvenido a MotoParts Argentina! Somos tu fuente global de repuestos y accesorios para motocicletas, cuatriciclos, scooters, vehículos acuáticos y side-by-side. Ofrecemos repuestos originales y nuevos de fábrica a precios competitivos, enviados directamente a clientes de todo el mundo."
+
     items={[
       {
         title: 'Experiencia Especializada',
@@ -209,14 +157,14 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Clientes', amount: '132K' },
       { title: 'Ventas concretadas', amount: '24.8K' },
       { title: 'Marcas', amount: '10.3K' },
       { title: 'Productos', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
   

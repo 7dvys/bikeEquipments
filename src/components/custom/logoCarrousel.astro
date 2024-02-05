@@ -22,7 +22,6 @@ import {type ImageMetadata } from 'astro';
 // console.log(logosSrcs)
 
 const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/logos/*.{jpeg,jpg,png,gif,svg}');
-console.log(images)
 ---
 
 <div class="logos dark:bg-white" >

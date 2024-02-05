@@ -1,0 +1,36 @@
+.container{
+    margin: 0px auto;
+    padding: 30px;
+}
+
+.masonry{
+    width:100%;
+    margin: 20px auto;
+    columns:4;
+    column-gap: 20px;
+}
+
+.masonry .box{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* .banner  */
+
+@media (max-width:1200px){
+    .masonry{
+        columns:3
+    }
+}
+
+@media (max-width:760px){
+    .masonry{
+        columns:2
+    }
+}
+
+@media (max-width:480px){
+    .masonry{
+        columns:1
+    }
+}

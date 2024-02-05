@@ -1,0 +1,20 @@
+---
+import '~/assets/styles/gallery.css';
+import {getImagesUrlFromPages} from '~/utils/scrapeImages';
+import { SCRAP_PAGES } from '~/utils/config';
+import {Banner} from './bannerSlider'
+
+const imagesUrls = await getImagesUrlFromPages(SCRAP_PAGES);
+---
+
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="container text-center max-w-5xl mx-auto">
+        <Banner bannersUrls={imagesUrls.banner} client:load />
+        
+        <h2 class="mt-6 mb-4 text-5xl md:text-xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200">ÚLTIMAS NOVEDADES</h2>
+        <div class="masonry">
+            {imagesUrls.photo.map(url=><div class="box"><img src={url}/></div>)}
+        </div>
+
+    </div>
+</div>

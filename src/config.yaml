@@ -70,7 +70,7 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   tokens:
     default:
@@ -83,7 +83,8 @@ ui:
         heading: rgb(0 0 0)
         muted: rgb(40 40 40)
         bgPage: rgb(255 255 255)
-        primary: rgb(0 124 220)
+        # primary: rgb(0 124 220)
+        primary: rgb(242, 235, 135)
         secondary: rgb(30 58 138)
         accent: rgb(109 40 217)
         info: rgb(119 182 234)

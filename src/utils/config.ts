@@ -207,3 +207,4 @@ export const APP_BLOG = getAppBlog();
 export const UI = getUI();
 export const ANALYTICS = getAnalytics();
 export const CARROUSEL_LOGOS_DIR = "./src/assets/images/logos";
+export const SCRAP_PAGES = [{page:'https://www.mercomaxsa.com.ar',filters:['logo','catalogo'],folderFilters:['marcas/algo']}]
