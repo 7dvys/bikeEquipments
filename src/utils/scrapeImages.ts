@@ -40,18 +40,25 @@ export const getImagesUrlFromPages = async (pages:{page:string,filters:string[],
         const filteredImagesSrc = imagesSrc.filter(src=>{
             
             const splitedSrc = src.split('/');
-            const endpoint = splitedSrc[splitedSrc.length-1];
-            
-            console.log(splitedSrc)
-            
-            const notPassFolderFilters = folderFilters.some(folderFilter=>{
+            const endpointIndex = splitedSrc.length-1
+            const endpoint = splitedSrc[endpointIndex];
+                        
+            const passFolderFilters = folderFilters.some(folderFilter=>{
                 const folders = folderFilter.split('/');
 
-                for(let counter = 0; counter < folders.length;counter++){
-                    const srcFolder = splitedSrc[splitedSrc.length-counter-1-1];
-                    console.log({srcFolder})
-                }
+                const someFolderNotMatch = folders.some((folder,index)=>{
+                    const srcFolderIndex = endpointIndex - (folders.length) + index;
+                    const srcFolder = splitedSrc[srcFolderIndex];
+
+                    if(folder !== srcFolder)
+                    return true;
+                })
+
+                return someFolderNotMatch;
             })
+
+            if(!passFolderFilters)
+            return false;
             
             const notPassFilters = filters.some(filter=>endpoint.startsWith(filter))
             return !notPassFilters             
