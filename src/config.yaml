@@ -1,7 +1,7 @@
 site:
   name: Bike Equipments
-  site: 'http://localhost:4321'
-  base: '/'
+  site: 'https://7dvys.github.io'
+  base: 'bikeEquipments'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Bike Equipments
     template: '%s — Bike Equipments'
-  description: "Importadora en Argentina especializada en la distribución de motopartes y amplia variedad de indumentaria para motociclistas. Ofrecemos accesorios, repuestos y ropa para motos de todas las gamas y categorías, incluyendo cascos y prendas de vestir de alta calidad. Descubre nuestra selección de productos para equipar tu moto y disfrutar de la conducción con estilo y seguridad. ¡Explora nuestras opciones de importación y encuentra todo lo que necesitas para tu experiencia en dos ruedas!"
+  description: 'Importadora en Argentina especializada en la distribución de motopartes y amplia variedad de indumentaria para motociclistas. Ofrecemos accesorios, repuestos y ropa para motos de todas las gamas y categorías, incluyendo cascos y prendas de vestir de alta calidad. Descubre nuestra selección de productos para equipar tu moto y disfrutar de la conducción con estilo y seguridad. ¡Explora nuestras opciones de importación y encuentra todo lo que necesitas para tu experiencia en dos ruedas!'
 
   robots:
     index: true
